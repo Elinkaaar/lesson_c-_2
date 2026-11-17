@@ -1,0 +1,20 @@
+#include <iostream>
+int main()
+{
+int  tailer{80};
+
+printTroughSensor(&tailer);
+printTrouhgSensor(nullptr);
+return 0;
+
+}
+
+void printTroughSensor(const int* sensor)
+{
+if (sensor == nullptr)
+{
+std::cout << "Sensor offline\n";
+return;
+}
+std::cout << "Telemetry: " << *sensor << "%\n";
+}
